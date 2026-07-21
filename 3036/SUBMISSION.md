@@ -15,13 +15,13 @@ If AI was used for this learning-log-required problem, also complete `ai_reflect
 OJ problem number/title:
 
 ```text
-3024
+3042
 ```
 
 OJ submission ID, if submitted:
 
 ```text
-549879
+558754
 ```
 
 OJ status:
@@ -73,7 +73,7 @@ Also explain the input, output, and important constraints.
 If you do not fully understand the problem yet, write what you currently understand. Your understanding may be incomplete or incorrect, but you must make a genuine attempt.
 
 ```text
-a question that want u check a max and min score 3 people is different or nah
+a question that want make a input that min 10 until 0 (beofre find nearest input number that can div with 10)
 ```
 
 ---
@@ -115,7 +115,7 @@ Do not copy AI's explanation.
 Do not copy another person's explanation.
 
 ```text
-if user input full score, highest score and it will find lowest score by mult 2 highest score to get worst soluation then it gonna check if both score is dif than 2 it will print "Surprising" else "Not Surprising"
+when user input then find a nearest number that can div with 10, make it step and print until 0
 ```
 
 ---
@@ -135,26 +135,25 @@ If the input or output has many lines, write them inside the text blocks.
 Why I chose this case:
 
 ```text
-check if it work
+test a normal
 ```
 
 Input:
 
 ```text
-30
-10
+5
 ```
 
 Expected output:
 
 ```text
-Not surprising
+4
 ```
 
 Actual output:
 
 ```text
-Not surprising
+4
 ```
 
 Result:
@@ -168,26 +167,25 @@ Pass
 Why I chose this case:
 
 ```text
-chekc if surprising work
+test if it correct follow a test case example
 ```
 
 Input:
 
 ```text
-20
-8
+21
 ```
 
 Expected output:
 
 ```text
-Surprising
+8
 ```
 
 Actual output:
 
 ```text
-Surprising
+8
 ```
 
 Result:
@@ -201,26 +199,25 @@ Pass
 Why I chose this case:
 
 ```text
-test if it impossible out range
+test big number
 ```
 
 Input:
 
 ```text
-999
-2
+3000
 ```
 
 Expected output:
 
 ```text
-Not surprising
+107
 ```
 
 Actual output:
 
 ```text
-Not surprising
+107
 ```
 
 Result:
@@ -236,7 +233,7 @@ Pass
 Did you use AI for this problem?
 
 ```text
-No
+Yes
 ```
 
 If yes, also complete:
