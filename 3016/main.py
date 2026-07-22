@@ -1,10 +1,6 @@
-"""deefw"""
+"""k"""
 def main():
-    """fff"""
+    """o"""
     n = int(input())
-    firstdigit = [7,9,3,1]
-    last2n = n%100
-    x = last2n%len(firstdigit)
-    r = firstdigit[x-1]
-    print(r)
+    print([1, 7, 9, 3][n % 4])
 main()
