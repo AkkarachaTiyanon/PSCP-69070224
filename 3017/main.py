@@ -1,12 +1,14 @@
 """kk"""
 def main():
     """s"""
-    k = float(input())
-    sc = k*0.1
-    if sc < 50:
-        sc = 50
-    elif sc > 1000:
-        sc = 1000
-    r = (k + sc) * 1.07
-    print(f'{r:.2f}')
+    Price = float(input())
+
+    Servicecharge = Price*0.1
+    if Servicecharge < 50:
+        Servicecharge = 50
+    elif Servicecharge > 1000:
+        Servicecharge = 1000
+    TotalPrice = (Price + Servicecharge) * 1.07
+
+    print(f'{TotalPrice:.2f}')
 main()

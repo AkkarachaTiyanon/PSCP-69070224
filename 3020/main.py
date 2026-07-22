@@ -1,31 +1,31 @@
 """ss"""
 def main():
     """ssopwow"""
-    a = int(input())
-    b = int(input())
-    c = int(input())
-    d = int(input())
+    Price = int(input())
+    ReqCap = int(input())
+    SpecialPrice = int(input())
+    RequireCokeAmount = int(input())
 
-    if not d:
+    if not RequireCokeAmount:
         print(0)
         return
 
-    if not b:
-        print(d * a)
+    if not ReqCap:
+        print(RequireCokeAmount * Price)
         return
 
     currentcoke = 0
     cap = 0
-    price = 0
-    while currentcoke < d:
-        if cap >= b:
-            cap -= b
-            price += c
+    TotalPrice = 0
+    while currentcoke < RequireCokeAmount:
+        if cap >= ReqCap:
+            cap -= ReqCap
+            TotalPrice += SpecialPrice
             currentcoke += 1
             cap += 1
         else:
-            price += a
+            TotalPrice += Price
             cap += 1
             currentcoke += 1
-    print(price)
+    print(TotalPrice)
 main()
