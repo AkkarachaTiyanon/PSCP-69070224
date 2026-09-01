@@ -1,56 +1,39 @@
-"""kkk"""
+"""oo"""
+import math
 
-def parse_time(time_str):
-    """time float > hour"""
-    parts = time_str.split('.')
-    if len(parts) != 2:
-        return
-    hours = int(parts[0])
-    minutes = int(parts[1])
-    if 0 <= hours <= 23 and 0 <= minutes <= 59:
-        return hours * 60 + minutes
-
-def calculate_fee(minutes):
-    """cal fee from min"""
-    if minutes <= 15:
-        return 0
-
-    hours = (minutes + 59) // 60
-
-    if hours == 1:
-        return 25
-    elif hours == 2:
-        return 50
-    elif hours == 3:
-        return 80
-    elif hours == 4:
-        return 110
-    elif hours == 5:
-        return 145
-    elif hours == 6:
-        return 180
-    elif 7 <= hours <= 24:
-        return 250
+def parse_time(s):
+    """k"""
+    try:
+        h, m = map(int, s.replace(".", ":").replace(" ", ":").split(":"))
+        if 0 <= h <= 23 and 0 <= m <= 59:
+            return h * 60 + m
+    except Exception:
+        return None
 
 def main():
-    entry_str = input().strip()
-    exit_str = input().strip()
+    """o"""
+    t1 = parse_time(input().strip())
+    t2 = parse_time(input().strip())
 
-    entry_min = parse_time(entry_str)
-    exit_min = parse_time(exit_str)
-
-    if entry_min is None or exit_min is None:
+    if t1 is None or t2 is None:
         print("ERROR")
         return
 
-    duration = exit_min - entry_min
-    if duration < 0:
-        duration += 24 * 60
+    diff = t2 - t1
+    if diff < 0:
+        diff += 1440
 
-    fee = calculate_fee(duration)
+    if diff <= 15:
+        print(0)
+        return
 
-    if fee is None:
-        print("ERROR")
+    hrs = math.ceil(diff / 60)
+    rates = {1: 25, 2: 50, 3: 80, 4: 110, 5: 145, 6: 180}
+
+    if 1 <= hrs <= 6:
+        print(rates[hrs])
+    elif 7 <= hrs <= 24:
+        print(250)
     else:
-        print(fee)
+        print("ERROR")
 main()
